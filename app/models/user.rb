@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
   has_many :tweets
+
+  def find_tweets
+    tweets.limit(10)
+  end
+
 end
