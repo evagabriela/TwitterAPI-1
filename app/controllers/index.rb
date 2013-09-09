@@ -9,6 +9,6 @@ end
 
 get '/:twitter_handler' do
   @tname = params[:twitter_handler]
-  @tmsgs = Twitter.user_timeline(@tname).map {|t| t.text}
+  @tmsgs = Twitter.user_timeline(@tname, count: 10).map {|t| t.text}
   erb :tweets
 end
