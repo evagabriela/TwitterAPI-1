@@ -1,4 +1,9 @@
 get '/' do
-  # Look in app/views/index.erb
-  erb :index
+  
+  erb :twitter_name
+end
+
+get '/:twitter_handler' do
+
+  erb :tweets
 end
