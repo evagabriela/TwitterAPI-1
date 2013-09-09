@@ -8,6 +8,7 @@ post '/' do
 end
 
 get '/:twitter_handler' do
-
+  @tname = params[:twitter_handler]
+  @tmsgs = Twitter.user_timeline(@tname).map {|t| t.text}
   erb :tweets
 end

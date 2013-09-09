@@ -1,1 +1,11 @@
-tweets.erb
+<div class="container">
+  <h3><%= @tname.capitalize %>'s Tweets</h3>
+
+
+    <ul>
+      <% @tmsgs.each do |t| %>
+      <li><%= t %></li>
+      <% end %>
+    </ul>
+
+</div>
