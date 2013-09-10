@@ -1,7 +1,3 @@
-twitteruser = User.create(name: 'chaeokeefe')
+# require_relative '../app/helpers/user_helper.rb'
 
-tweets = Twitter.user_timeline('chaeokeefe').map {|t| t.text}
-
-tweets.each do |tweet|
-  twitteruser.tweets << Tweet.create(message: tweet)
-end
+log_user('chaeokeefe')
